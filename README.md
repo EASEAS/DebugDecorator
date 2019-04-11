@@ -2,7 +2,7 @@
 A python decorator function to enable debugging of function calls
 
 
-Added the @debug to any function to receive arguments.
+Add the @debug('path/to/log/', bool ) decorator to any function to log arguments.
 
 Logging can be send to the file in a path or it can be sent to stdout if 
 no path is specified.
