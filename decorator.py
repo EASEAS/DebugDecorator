@@ -1,6 +1,7 @@
 import functools
+import os
 
-path = "/home/erik/Documents/python/"
+path = os.getcwd()
 
 def debug(filePath=None,returnValueLog=False):
     
@@ -36,15 +37,14 @@ def debug(filePath=None,returnValueLog=False):
         return wrapper
     return decorator
 
+@debug (None, True)
 def complexFunc(*args, **kwargs):
     ret = 1
     for a in args:
         ret *= a
     return ret 
-@debug (None, True)
 def simpleFunc(value):
     return value**2
-
 
 x = complexFunc(1,3,7,10,123)
 y = simpleFunc(x)
